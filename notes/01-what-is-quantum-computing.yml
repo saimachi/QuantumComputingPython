@@ -1,0 +1,18 @@
+This series:
+  - starts as an investor's guide to quantum computing
+  - however, code examples and some math explained for those who want a deeper dive
+
+Introductory concepts:
+  - Current computers use classical bits; quantum machines use qubits
+  - What quantum interactions are there?
+    - a superposition refers to a combination (sum) of quantum states:
+      - do know that whenever a quantum system is measured, it will RANDOMLY RETURN a discrete output (e.g. 1 or 0)
+      - for instance, a qubit may exist in a superposition; however, when it is measured, it will randomly represent a 1 or 0
+    - two entangled quantum particles are "linked together":
+      - when the state of one particle is measured, it will behave randomly
+      - however, its behavior indicates the measured behavior of the other particle 
+      - this rule applies regardless of the distance between the entangled particles
+      - a key rule for quantum computation
+    - quantum interference: TODO
+
+Fields revolutionized by Quantum Computing: TODO
