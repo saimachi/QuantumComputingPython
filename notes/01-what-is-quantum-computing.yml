@@ -13,6 +13,23 @@ Introductory concepts:
       - however, its behavior indicates the measured behavior of the other particle 
       - this rule applies regardless of the distance between the entangled particles
       - a key rule for quantum computation
-    - quantum interference: TODO
+    - quantum interference can be understood as similar to wave interference:
+      - when two waves are in phase, their amplitudes add
+      - when they are not in phase, their amplitudes cancel
 
-Fields revolutionized by Quantum Computing: TODO
+Fields revolutionized by Quantum Computing: 
+  - quantum physics:
+    - in 1981, Richard Feynman mentioned humanity's inability to model quantum systems for experimentation
+    - so he proposed a quantum machine, which wouldn't need to store the tremendous number of variables in limited memory
+    - there are practical applications; consider chemistry, with its atomic interactions
+  - retrieval in large amounts of data:
+    - phone book example:
+      - phone book contains 1,000,000 records
+      - each entry is indexed by NAME--not phone number
+      - so, possibly, we may need to sift through all 1,000,000 records to find the name associated with a particular number
+      - in 1996, Bell Labs engineers proved that this process could be reduced to 1,000 steps max on a quantum machine
+        - pre-teach extension: Grover's algorithm for inverting a function
+  - What other problems are you excited to solve with quantum computing?
+
+- Excellent page about use cases: https://www.ias.edu/ideas/2014/ambainis-quantum-computing
+- The next notes page will explain why quantum machines are so capable at certain tasks, and introduce quantum gates
