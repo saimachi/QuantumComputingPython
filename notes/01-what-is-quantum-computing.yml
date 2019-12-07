@@ -3,8 +3,9 @@ This series:
   - however, code examples and some math explained for those who want a deeper dive
 
 Introductory concepts:
-  - Current computers use classical bits; quantum machines use qubits
-  - What quantum interactions are there?
+  - current computers use classical bits; quantum machines use qubits
+  - qubits can be 0, 1, or both (superposition)
+  - What quantum interactions are there among qubits?
     - a superposition refers to a combination (sum) of quantum states:
       - do know that whenever a quantum system is measured, it will RANDOMLY RETURN a discrete output (e.g. 1 or 0)
       - for instance, a qubit may exist in a superposition; however, when it is measured, it will randomly represent a 1 or 0
