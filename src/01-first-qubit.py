@@ -38,7 +38,9 @@ class Qubit:
         proportion_spin_up = int(self.__get_probability(0) * num_hits)
         choices = [np.array([1, 0])] * proportion_spin_up \
                 + [np.array([0, 1])] * (num_hits - proportion_spin_up)
-        return random.choice(choices)
+        decision = random.choice(choices)
+        self.__state_vector = decision
+        return decision
 
 if __name__ == '__main__':
     q = Qubit()
