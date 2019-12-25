@@ -1,5 +1,6 @@
 import numpy as np 
 import random 
+import math
 
 class Qubit:
     '''
@@ -23,7 +24,7 @@ class Qubit:
         Returns:
             float: the desired probability
         '''
-        return (self.__state_vector[state]) ** 2
+        return self.__state_vector[state] ** 2
 
     def view_state(self, num_hits=1000):
         '''
@@ -35,21 +36,34 @@ class Qubit:
         Returns:
             np.array: indicating whether electron is spin-up or spin-down
         '''
-        proportion_spin_up = int(self.__get_probability(0) * num_hits)
+        proportion_spin_up = int((self.__get_probability(0)) ** 2 * num_hits)
         choices = [np.array([1, 0])] * proportion_spin_up \
                 + [np.array([0, 1])] * (num_hits - proportion_spin_up)
         decision = random.choice(choices)
         self.__state_vector = decision
         return decision
 
+    def pauli_x(self):
+        '''
+        Computes the equivalent of the classical NOT gate on the qubit
+
+        Parameters:
+
+        Returns:
+        '''
+        self.__state_vector = np.dot(np.array([[0, 1], [1, 0]]), self.__state_vector)
+
+    def hadamard(self):
+        '''
+        Computes the equivalent of the classical NOT gate on the qubit
+
+        Parameters:
+
+        Returns:
+        '''
+        self.__state_vector = np.dot(math.sqrt(2) * np.array([[1, 1], [1, -1]]), self.__state_vector)
+
+    
+
 if __name__ == '__main__':
     q = Qubit()
-    spin_up = 0
-    spin_down = 0
-    for i in range(1000):
-        if (q.view_state() == np.array([1, 0])).all():
-            spin_up += 1
-        else:
-            spin_down += 1
-    print('Number of spin-up occurrences: ', spin_up)
-    print('Number of spin-down occurrences: ', spin_down)
